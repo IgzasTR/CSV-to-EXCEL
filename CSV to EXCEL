@@ -1,0 +1,15 @@
+import pandas as pd
+
+# CSV dosyasının yolu
+csv_dosyasi = 'C:/Users/ugur.tercan/Tutorials-1/output.csv' 
+
+# Excel dosyasının çıkış yolu
+excel_dosyasi = 'C:/Users/ugur.tercan/Tutorials-1/output.xlsx' 
+
+# CSV dosyasını oku
+df = pd.read_csv(csv_dosyasi)
+
+# Veriyi Excel dosyasına kaydet
+df.to_excel(excel_dosyasi, index=False, engine='openpyxl')
+
+print(f"CSV dosyası başarıyla {excel_dosyasi} olarak dönüştürüldü.")
